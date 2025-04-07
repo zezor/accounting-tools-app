@@ -21,6 +21,9 @@ def app_header():
         <div class="main-title">💼 E & G Accounting Tools</div>
         <div class="subtitle">Your trusted tools for smart money decisions</div>
     """, unsafe_allow_html=True)
+# calling header
+app_header()
+
 def treasury_bill():
     st.header("Treasury Bill Calculator")
     amount = st.number_input("Enter amount invested (GHS)", min_value=0.0)
@@ -336,12 +339,11 @@ def main():
 if __name__ == "__main__":
     main()
 
-
 # FOOTER SECTION
 def app_footer():
     st.markdown("""
         <hr style="border-top: 1px solid #bbb;">
-        <div style="text-align: center; font-size: 14px; color: gray;">
+        <div style="text-align: center; font-size: 14px; color: white;">
             Developed by <strong>Kemma Solutions</strong><br>
             📧 <a href="mailto:kemma@example.com" style="color: gray;">kemma@example.com</a><br>
             🔗 <a href="https://www.linkedin.com/company/kemma-solutions" target="_blank" style="color: gray;">LinkedIn</a> | 
@@ -349,3 +351,5 @@ def app_footer():
             &copy; 2025 All Rights Reserved.
         </div>
     """, unsafe_allow_html=True)
+# calling footer
+app_footer()

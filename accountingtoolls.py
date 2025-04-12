@@ -21,11 +21,12 @@ def app_header():
         <div class="main-title">💼 E & G Accounting Tools</div>
         <div class="subtitle">Your trusted tools for smart money decisions</div>
     """, unsafe_allow_html=True)
+app_header()
 def treasury_bill():
     st.header("Treasury Bill Calculator")
     amount = st.number_input("Enter amount invested (GHS)", min_value=0.0)
     t_bill_days = st.selectbox("Choose Treasury Bill Type", [91, 182, 364])
-    rates = {91: 15.0606, 182: 15.2438, 364: 15.8464}
+    rates = {91: 15.4528, 182: 16.2149, 364: 18.6507}
     rate = rates[t_bill_days]
 
     if st.button("Calculate Treasury Bill"):
@@ -147,15 +148,16 @@ elif menu == "Withholding Tax":
 def treasury_bill_calculator():
     print("\n--- Treasury Bill Calculator ---")
     print("Treasury Bill Rates in Ghana (April 2025):")
-    print(" 91 DAY BILL ----Rate 15.0606%")
-    print(" 182 DAY BILL ----Rate 15.2438%")
-    print(" 364 DAY BILL ----Rate 15.8464%")
+    print(" 91 DAY BILL ----Rate 15.4528%")
+    print(" 182 DAY BILL ----Rate 16.2149%")
+    print(" 364 DAY BILL ----Rate 18.6507%")
 
     try:
         amount_invested = float(input("Enter amount to invest (GHS): "))
         T_bill_type = int(input("Enter Treasury Bill type in days (91, 182, 364): "))
 
-        rates = {91: 15.0606, 182: 15.2438, 364: 15.8464}
+
+        rates = {91: 15.4528, 182: 16.2149, 364: 18.6507}
         if T_bill_type not in rates:
             print("Invalid Treasury Bill Type. Choose 91, 182, or 364.")
             return
@@ -349,3 +351,4 @@ def app_footer():
             &copy; 2025 All Rights Reserved.
         </div>
     """, unsafe_allow_html=True)
+app_footer()

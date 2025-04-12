@@ -1,5 +1,6 @@
 
 import streamlit as st
+import appfooter
 # HEADER SECTION
 def app_header():
     st.markdown("""
